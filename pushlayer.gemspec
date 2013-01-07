@@ -18,8 +18,12 @@ eodescription
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- {spec}/*`.split("\n")
 
-  s.add_development_dependency 'rspec', '~> 2.0'
-
   s.required_ruby_version = Gem::Requirement.new('>= 1.9.2')
   s.require_paths = ['lib']
+
+  s.add_dependency 'rest-client', '~> 1.6.7'
+  s.add_dependency 'multi_json', '>= 1.0.4', '< 2'
+
+  s.add_development_dependency 'rspec', '~> 2.0'
+  s.add_development_dependency 'webmock', '~> 1.9.0'
 end
