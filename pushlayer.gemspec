@@ -22,7 +22,7 @@ eodescription
   s.require_paths = ['lib']
 
   s.add_dependency 'rest-client', '~> 1.6.7'
-  s.add_dependency 'multi_json', '>= 1.0.4', '< 2'
+  s.add_dependency 'multi_json', '~> 1.5.0'
 
   s.add_development_dependency 'rspec', '~> 2.0'
   s.add_development_dependency 'webmock', '~> 1.9.0'
