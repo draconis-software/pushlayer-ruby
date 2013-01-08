@@ -20,7 +20,7 @@ describe Pushlayer do
 
     it 'POSTs to the correct URL' do
       body = { device_token: @device_token, alert_body: @alert_body }
-      headers = { user_agent: user_agent }
+      headers = { content_type: 'application/json', user_agent: user_agent }
 
       WebMock.should have_requested(:post, @expected_url).with(body: body, headers: headers).once
     end

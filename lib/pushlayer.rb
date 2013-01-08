@@ -1,4 +1,6 @@
 require 'rest_client'
+require 'multi_json'
+
 require 'pushlayer/version'
 
 module Pushlayer
@@ -14,11 +16,11 @@ module Pushlayer
     @@api_key = key
   end
 
-  def self.post_notification(device_token, alert_body)
-    params = { device_token: device_token, alert_body: alert_body }
-    headers = { user_agent: user_agent }
+  def self.post_notification(device_token, alert_body, opts={})
+    params = { device_token: device_token, alert_body: alert_body }.merge opts
+    headers = { accept: :json, content_type: :json, user_agent: user_agent }
 
-    RestClient.post endpoint, params, headers
+    RestClient.post endpoint, MultiJson.dump(params), headers
   end
 
   private
