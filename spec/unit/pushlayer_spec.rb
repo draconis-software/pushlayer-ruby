@@ -19,12 +19,18 @@ describe Pushlayer do
     end
 
     it 'POSTs to the correct URL' do
-      WebMock.should have_requested(:post, @expected_url).with(body: {device_token: @device_token,
-        alert_body: @alert_body}).once
+      body = { device_token: @device_token, alert_body: @alert_body }
+      headers = { user_agent: user_agent }
+
+      WebMock.should have_requested(:post, @expected_url).with(body: body, headers: headers).once
     end
   end
 
   def post_notification_url(id, key)
     "https://www.pushlayer.com/applications/#{id}/notifications.json?api_key=#{key}"
+  end
+
+  def user_agent
+    "PushLayer/v1 RubyBindings/#{Pushlayer::VERSION}"
   end
 end
