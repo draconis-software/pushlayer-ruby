@@ -4,3 +4,4 @@ pkg/
 rdoc/
 .DS_Store
 .yardoc/
+doc/

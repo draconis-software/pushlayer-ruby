@@ -1,0 +1,6 @@
+--no-private
+
+lib/**/*.rb
+-
+README.md
+MIT-LICENSE

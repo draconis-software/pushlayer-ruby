@@ -48,7 +48,24 @@ This will tell PushLayer to construct a payload consisting of the alert message 
 The result will be a Ruby hash of the PushLayer notification object, similar to:
 
 ```ruby
-"{\"action_loc_key\":null,\"alert_body\":\"Hello from PushLayer!\",\"application_id\":1,\"badge\":null,\"created_at\":\"2013-01-08T03:50:06Z\",\"custom_payload\":null,\"device_token\":\"123abc\",\"id\":3,\"launch_image\":null,\"loc_args\":null,\"loc_key\":null,\"sound\":null,\"state\":\"pending\",\"status_code\":null,\"updated_at\":\"2013-01-08T03:50:06Z\"}"
+{
+  "action_loc_key":null,
+  "alert_body":"Hello from PushLayer!",
+  "application_id":1,
+  "badge":null,
+  "created_at":
+  "2013-01-08T03:50:06Z",
+  "custom_payload":null,
+  "device_token":"123abc",
+  "id":3,
+  "launch_image":null,
+  "loc_args":null,
+  "loc_key":null,
+  "sound":null,
+  "state":"pending",
+  "status_code":null,
+  "updated_at":"2013-01-08T03:50:06Z"
+}
 ```
 
 ## Help
