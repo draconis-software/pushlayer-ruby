@@ -6,7 +6,8 @@ Gem::Specification.new do |s|
   s.version     = Pushlayer::VERSION
   s.authors     = ['Ryan Twomey, Costa Walcott']
   s.email       = ['info@pushlayer.com']
-  s.homepage    = 'https://www.pushlayer.com'
+  s.homepage    = 'https://github.com/draconis-software/pushlayer-ruby'
+  s.license     = 'MIT'
   s.summary     = 'pushlayer sends iOS push notifications using PushLayer.com'
 
   s.description = <<-eodescription
